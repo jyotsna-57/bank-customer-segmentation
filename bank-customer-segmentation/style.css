@@ -1,0 +1,155 @@
+/* General styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #eaeaea; /* Light background for contrast */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #0056b3; /* Darker primary color */
+    color: white;
+    text-align: center;
+    width: 100%;
+    padding: 2rem 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3rem;
+    z-index: 2;
+}
+
+.subheading {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin: 0.5rem 0;
+    z-index: 2;
+}
+
+/* Main content layout */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    padding: 2rem 0;
+}
+
+.info-section {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.info-section p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.btn {
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 25px; /* Rounded button */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Added transform for scaling */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly scale up */
+}
+
+/* Chart Section */
+.chart-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chart-container {
+    width: 80%;
+    max-width: 900px;
+    height: 450px;
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Description Section */
+.description-section {
+    margin-top: 3rem;
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    width: 80%;
+}
+
+.description-section h2 {
+    font-size: 2rem;
+    color: #0056b3;
+    margin-bottom: 1rem;
+}
+
+.description-section p {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Footer */
+.footer {
+    margin-top: 2rem;
+    background-color: #f1f1f1;
+    text-align: center;
+    width: 100%;
+    padding: 1rem 0;
+    border-top: 1px solid #ccc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .chart-container {
+        width: 100%;
+        height: 400px;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 12px;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+}
